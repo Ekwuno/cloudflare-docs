@@ -28,7 +28,7 @@ To configure automatic builds for preview deployments, there are three options t
 
 * **All non-Production branches**: By default, Pages will automatically deploy any and every commit to a Preview branch and thus is set to “All non-Production branches”. 
 * **None**: If you would like to turn off automatic builds for all preview branches you can do so by selecting this option. 
-* **Custom branches** :However, if you would like to further customize the automatic deployments of _certain_ preview branches, you can do so by selecting **Custom Branches** &lt;custom branch configure link>
+* **Custom branches** :However, if you would like to further customize the automatic deployments of _certain_ preview branches, you can do so by selecting **Custom Branches** &lt;custom branch configure link>.
 
 ![Include preview branch](./media/include-preview-brances.png)
 
