@@ -46,7 +46,7 @@ After your first deployment, in the Pages dashboard, you can navigate to your ne
 
 #### Creating a new deployment:
 
-Once you’ve deployed your project, you can continue to add new deployments to that project. Deployments will be available at the following convention &lt;deployment>.&lt;project name>.pages.dev. 
+Once you’ve deployed your project, you can continue to add new deployments to that project. Deployments will be available at the following convention `<deployment>.<project name>.pages.dev`. 
 
 
 ```sh
@@ -81,19 +81,19 @@ For step by step directions on how to use Wrangler and continuous integration to
 
 #### Deploying your first project
 
-To begin, on the "Create a Project" page, select “Upload Assets” and enter your project name in the provided field. Your project will be served from &lt;project name>.pages.dev. Next drag and drop your build output directory into the uploading frame. Once your files have been successfully uploaded, click “Save and Deploy” and continue to your newly deployed project. 
+To begin, on the **Create a Project** page, select **Upload Assets** and enter your project name in the provided field. Your project will be served from `<project name>.pages.dev`. Next drag and drop your build output directory into the uploading frame. Once your files have been successfully uploaded, click **Save and Deploy** and continue to your newly deployed project. 
 
 
 #### Creating a new deployment
 
-Once you have your project created, select “Create a new deployment” to begin a new version of your site. Next, choose whether your new deployment will be made to your production or preview environment. If choosing preview, you can create a new deployment target or enter an existing one. Deployment targets allow you to access all changes at one preview subdomain with the following convention `<deployment target>.<project name>.pages.dev`. 
+Once you have your project created, select **Create a new deployment** to begin a new version of your site. Next, choose whether your new deployment will be made to your production or preview environment. If choosing preview, you can create a new deployment target or enter an existing one. Deployment targets allow you to access all changes at one preview subdomain with the following convention `<deployment target>.<project name>.pages.dev`. 
 
 
 ## Troubleshooting
 
 When uploading your assets, if an asset exceeds the standard Pages limits of 25 MiB or if the total number of assets exceeds 20k files, you will not be able to deploy your project. 
 
-If using Wrangler, you will see a `Error: Pages only supports files up to 25 MiB in size. <file> is <size> in size` error for asset size exceedance and "Error: Pages only supports up to 20,000 files in a deployment at the moment. Try a smaller project” for asset number exceedance. 
+If using Wrangler, you will see a `Error: Pages only supports files up to 25 MiB in size. <file> is <size> in size` error for asset size exceedance and **"Error: Pages only supports up to 20,000 files in a deployment at the moment. Try a smaller project”** for asset number exceedance. 
 
 If using the drag and drop method, a red warning symbol will appear next to an asset if too large and thus unsuccessfully uploaded. In this case, you may choose to delete that asset but you cannot replace it. In order to do so, you must reupload the entire project. If you exceed the file number limit, you will receive a {write error message here} error. 
  
