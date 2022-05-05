@@ -11,14 +11,14 @@ When connected to your git source, Pages allows you to control which environment
 
 Without any configuration required, you can choose to skip a build and deployment on an adhoc basis. By adding [CISkip], [CI-Skip], [Skip CI], [Skip-CI] or [CF-Pages-Skip] as a prefix in your commit message, Pages will omit that build/deployment. The prefixes are case insensitive. 
 
-However, if you would like to configure your project’s settings for automatic deployments going forward without having to use CI Skip, begin by navigating to the **Build & Deployments **section of your project. 
+However, if you would like to configure your project’s settings for automatic deployments going forward without having to use CI Skip, begin by navigating to the **Build & Deployments** section of your project. 
 
 
 ### Production branch control 
 
 Select  “Configure Production deployments”. Pages will default to setting your Production environment to the branch you first push, however, you can set your production to another branch if you choose. 
 
-You can also enable or disable automatic deployment** **behavior on the Production branch by checking the provided box. You must save your settings in order for the new Production branch controls to take effect. 
+You can also enable or disable automatic deployment behavior on the Production branch by checking the provided box. You must save your settings in order for the new Production branch controls to take effect. 
 
 ![Configure preview branch](../media/configure-preview-deployment.png)
 
@@ -28,16 +28,16 @@ To configure automatic builds for preview deployments, there are three options t
 
 * **All non-Production branches**: By default, Pages will automatically deploy any and every commit to a Preview branch and thus is set to “All non-Production branches”. 
 * **None**: If you would like to turn off automatic builds for all preview branches you can do so by selecting this option. 
-* **Custom branches** :However, if you would like to further customize the automatic deployments of _certain_ preview branches, you can do so by selecting **Custom Branches** &lt;custom branch configure link>.
+* **Custom branches**: However, if you would like to further customize the automatic deployments of _certain_ preview branches, you can do so by selecting [**Custom Branches**].
 
 ![Include preview branch](../media/include-preview-brances.png)
 
 #### Custom Preview Branch Control  
 
-By selecting “Custom branches”, you can specify in the provided configuration fields branches you wish to include and exclude from automatic deployments. The configuration fields can be filled in two ways: 
+By selecting Custom branches, you can specify in the provided configuration fields branches you wish to include and exclude from automatic deployments. The configuration fields can be filled in two ways: 
 
 * **Static branch names**: Enter the precise name of the branch you are looking to include or exclude (e.g. staging, dev) 
-* **Wildcard syntax: **Use wildcards to match multiple branches. You can specify wildcards at the start or end of your rule. The order of execution for the config is:
+* **Wildcard syntax**: Use wildcards to match multiple branches. You can specify wildcards at the start or end of your rule. The order of execution for the config is:
 1. Excludes
 2. Includes
 3. Skip 
@@ -62,7 +62,7 @@ If you want to enforce branch prefixes such as `fix/`, `feat/`, or `chore/` with
 
 ``
 
-where Pages will include any branches with the indicated prefixes and exclude everything else.
+where Pages will include any branches with the indicated prefixes and exclude everything else. In this example the excluding option is left empty.
 
 ###### Example 2
 
