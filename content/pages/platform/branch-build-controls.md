@@ -20,7 +20,7 @@ Select  “Configure Production deployments”. Pages will default to setting yo
 
 You can also enable or disable automatic deployment** **behavior on the Production branch by checking the provided box. You must save your settings in order for the new Production branch controls to take effect. 
 
-![Configure preview branch](./media/configure-preview-deployment.png)
+![Configure preview branch](../media/configure-preview-deployment.png)
 
 ### Preview branch control 
 
@@ -30,7 +30,7 @@ To configure automatic builds for preview deployments, there are three options t
 * **None**: If you would like to turn off automatic builds for all preview branches you can do so by selecting this option. 
 * **Custom branches** :However, if you would like to further customize the automatic deployments of _certain_ preview branches, you can do so by selecting **Custom Branches** &lt;custom branch configure link>.
 
-![Include preview branch](./media/include-preview-brances.png)
+![Include preview branch](../media/include-preview-brances.png)
 
 #### Custom Preview Branch Control  
 
