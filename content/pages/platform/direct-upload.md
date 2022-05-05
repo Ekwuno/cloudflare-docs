@@ -81,7 +81,7 @@ For step by step directions on how to use Wrangler and continuous integration to
 
 #### Deploying your first project
 
-To begin, on the "Create a Project" page, select “Upload Assets” and enter your project name in the provided field. Your project will be served from &lt;project name>.pages.dev. Next drag and drop your build output directory into the uploading frame. Once your files have been successfully uploaded, click “Save and Deploy” and continue to your newly deployed project! 
+To begin, on the "Create a Project" page, select “Upload Assets” and enter your project name in the provided field. Your project will be served from &lt;project name>.pages.dev. Next drag and drop your build output directory into the uploading frame. Once your files have been successfully uploaded, click “Save and Deploy” and continue to your newly deployed project. 
 
 
 #### Creating a new deployment
