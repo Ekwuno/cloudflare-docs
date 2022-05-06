@@ -66,7 +66,7 @@ If you want to enforce branch prefixes such as `fix/`, `feat/`, or `chore/` with
     
 where Pages will include any branches with the indicated prefixes and exclude everything else. In this example the excluding option is left empty.
 
-**_Example 2_**
+**_Example 2:_**
 
 If you wanted to prevent dependabot from creating a deployment for each PR it creates, you can exclude those branches with the following:
 
