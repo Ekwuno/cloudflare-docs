@@ -5,7 +5,7 @@ title: Use Direct Upload with continuous integration
  
 # Use Direct Upload with continuous integration
  
-Cloudflare Pages now supports directly uploading pre-built assets, allowing you to use custom build steps for your applications and deploy to Pages with [Wrangler](/workers/cli-wrangler/).
+Cloudflare Pages now supports directly uploading prebuilt assets, allowing you to use custom build steps for your applications and deploy to Pages with [Wrangler](/workers/cli-wrangler/).
  
  
 ## Deploying with Wrangler
@@ -30,7 +30,7 @@ Click on **Continue to summary** and then **Create Token**. Now that you have cr
  
 [GitHub Actions](https://docs.github.com/en/actions) is a continuous integration and continuous delivery (CI/CD) platform that allows you to automate your build, test, and deployment pipeline when using GitHub. You can create workflows that build and test every pull request to your repository or deploy merged pull requests to production.
  
-After initially setting up your project, you can set up a GitHub Action to automate your subsequent deployments with Wrangler.
+After setting up your project initially, you can set up a GitHub Action to automate your subsequent deployments with Wrangler.
  
 ### Add Cloudflare credentials to GitHub secrets
  
@@ -47,7 +47,7 @@ In your `pages-deployment.yaml` file, copy the following content:
 ```yaml
 ---
 filename: .github/workflows/pages-deployment.yaml
-—--
+---
 on: [push]
 jobs:
  deploy:
@@ -61,7 +61,6 @@ jobs:
          apiToken: ${{ secrets.CF_API_TOKEN }}
          accountId: ${{ secrets.CF_ACCOUNT_ID }}
          command: pages publish --project-name=<project name>
- 
 ```
  
 In the above code block, you have set up an Action that runs when you push code to the repository; running on `ubuntu-latest`, it first checks out your repository with the latest version of Node.
@@ -72,26 +71,26 @@ If your project uses a different Node version less than 16, you will have to upg
  
 {{</Aside>}}
  
-The next step is to install [Wrangler 2](/workers/cli-wrangler/) in your project, using the `cloudflare/wrangler-action@2.0.0` action which requires you to have set up your environment variables.
+The next step is to install [Wrangler 2](/workers/cli-wrangler/) in your project, using the `cloudflare/wrangler-action@2.0.0` Action, which requires you to set up your environment variables.
  
 Finally, the Action makes sure you log in to your Account with your Cloudflare credentials stored as secrets in your project to publish your site with the `pages publish` command.
  
 
 ## Using CircleCI for CI/CD
  
-[CircleCI](https://circleci.com/) is another continuous integration and continuous delivery (CI/CD) platform that allows you to automate your build, test, and deployment pipeline. It can be configured to run very complex pipelines efficiently with caching, docker layer caching, resource classes, etc.
+[CircleCI](https://circleci.com/) is another continuous integration and continuous delivery (CI/CD) platform that allows you to automate your build, test, and deployment pipeline. It can be configured to efficiently run complex pipelines with caching, docker layer caching, resource classes, etc.
  
 Similar to GitHub Actions, CircleCI can use Wrangler to continuously deploy your projects each time to push to your code.
  
 ### Add Cloudflare credentials to CircleCI
  
-After you have generated your Cloudflare API token and found your account ID in the dashboard, you will need to add them to your CircleCI dashboard so your environment variables can be used in your project.
+After you have generated your Cloudflare API token and found your account ID in the dashboard, you will need to add them to your CircleCI dashboard to use your environment variables in your project.
  
-On the CircleCI web app, go to your project's settings. You can navigate to "Projects" on the side navigation and then click the ellipsis button in the project's row. You will see the option to add Environment variables:
+On the CircleCI web app, go to your project's settings. You can navigate to "Projects" on the side navigation and click the ellipsis button in the project's row. You will see the option to add Environment variables:
  
 ![project setting env var](../media/project-settings-env-var-v2.png)
  
-Then click on **Environment Variables** in the side navigation > **Add variable** and enter the name and value of the new environment variable, which in this case is your Cloudflare credentials (`CLOUDFLARE_ACCOUNT_ID` and `CLOUDFLARE_API_TOKEN`).  
+Then click on **Environment Variables** in the side navigation > **Add variable** and enter the name and value of the new environment variable, which is your Cloudflare credentials (`CLOUDFLARE_ACCOUNT_ID` and `CLOUDFLARE_API_TOKEN`).  
  
 ### Setup
  
@@ -138,20 +137,23 @@ The job then proceeds to run all the steps specified, after which you will need 
  
 ## Using Travis CI for CI/CD
  
-Travis CI is an open-source continuous integration tool that handles specific tasks; such as Pull requests, and code pushes for your project workflow. Travis can be integrated into your GitHub projects, databases and other pre-installed services which can be enabled in your build configuration.  To use Travis CI you should have A GitHub or Bitbucket or GitLab or Assembla account.
+Travis CI is an open-source continuous integration tool that handles specific tasks, such as Pull requests and code pushes for your project workflow. Travis CI can be integrated into your GitHub projects, databases, and other pre-installed services enabled in your build configuration. To use Travis CI, you should have A GitHub, Bitbucket, GitLab or Assembla account.
 
 ### Add Cloudflare credentials to TravisCI
- In your Travis project you will need to add the Cloudflare credentials you have generated from the Cloudflare dashboard in order to access them in your `travis.yml` file. To do this head over to your Travis CI dashboard and select your current project > More options > settings > Environment variables.
+ In your Travis project, you will need to add the Cloudflare credentials you have generated from the Cloudflare dashboard to access them in your `travis.yml` file. Head over to your Travis CI dashboard and select your current project > More options > settings > Environment variables.
 
-Set the name and value of the Environment variable and also the branch you want it to be attached to. You can also set the privacy of the value.
+Set the environment variable's name and value and the branch you want it to be attached to; You can also set the privacy of the value.
 
 ### Setup
-Go to Travis-ci.com and enable your repository by login in with your preferred provider. This guide uses GitHub. Next create a `.travis.yml` file and copy the following into the file:
+Go to Travis-ci.com and enable your repository by login in with your preferred provider. This guide uses GitHub. Next, create a `.travis.yml` file and copy the following into the file:
 
-```yml
+```yaml
+---
+filename: .travis.yml
+---
 language: node_js
 node_js:
-- "16.17.0" # You can specific more versions of node you want your CI process to support
+- "16.17.0" # You can specify more versions of Node you want your CI process to support
 branches:
  only:
    - travis-ci-test # Specify what branch you want your CI process to run on
@@ -159,7 +161,7 @@ install:
  - npm install
  
 script:
- - npm run build # Switch this out with your own build command or remove if     you don't have a build step
+ - npm run build # Switch this out with your build command or remove it if you don't have a build step
  - npx wrangler pages publish dist --project-name=<PROJECT NAME>
  
 env:
@@ -169,7 +171,7 @@ env:
 
 ```
 
-In the code block above you have specified the language as `node_js` and listed the value as `16.7.0` because wrangler2 depends on this version of node or higher. You have also specified branches you want you continuous integration to run on. In the script section, input your `PROJECT NAME` and your CI process should work as expected. 
+In the code block above you have specified the language as `node_js` and listed the value as `16.7.0` because wrangler2 depends on this Node version or higher. You have also set branches you want your continuous integration to run on. Finally, input your `PROJECT NAME` in the script section, and your CI process should work as expected. 
  
  
  
