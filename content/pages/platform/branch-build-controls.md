@@ -38,56 +38,54 @@ By selecting Custom branches, you can specify in the provided configuration fiel
 
 * **Static branch names**: Enter the precise name of the branch you are looking to include or exclude (e.g. staging, dev) 
 * **Wildcard syntax**: Use wildcards to match multiple branches. You can specify wildcards at the start or end of your rule. The order of execution for the config is:
-1. Excludes
-2. Includes
-3. Skip 
+<ol>
+  <ol>
+    <li>Excludes</li>
+    <li>Includes</li>
+    <li>Skip</li>
+  </ol>
+</ol>
 
 This means we will process the exclude configuration first, then go to the include configuration and if a branch doesn't match either then it will be skipped.
 
-##### Wildcards
+#### Wildcards
 
 A wildcard (`*`) is a character that is used within rules. It can be placed alone to match anything or placed at the start or end of a rule to allow for better control over branch configuration. A wildcard will match zero or more characters. 
 
 For example, if you wanted to match all branches that started with `fix/` then you would create the rule `fix/*` to match strings like `fix/1`, `fix/bugs`or `fix/`
 
-###### Example 1: 
-
+**_Example 1:_**
+    
 If you want to enforce branch prefixes such as `fix/`, `feat/`, or `chore/` with wildcard syntax, you can include and exclude certain branches with the following rules:
 
 Include Preview branches:
-
 `fix/*`, `feat/*`, `chore/*`
 
 Exclude Preview branches:
-
 ``
-
+    
 where Pages will include any branches with the indicated prefixes and exclude everything else. In this example the excluding option is left empty.
 
-###### Example 2
+**_Example 2_**
 
 If you wanted to prevent dependabot from creating a deployment for each PR it creates, you can exclude those branches with the following:
 
 Include Preview branches:
-
 `*`
 
 Exclude Preview branches:
-
 `dependabot/*`
 
 where Pages will include all branches except any branch starting with “dependabot”. 
 
-###### Example 3: 
+**_Example 3:_**
 
 If you only want to deploy release-prefixed branches, then you could use the following rules:
 
-Include Preview branches
-
+Include Preview branches:
 `release/*`
 
-Exclude Preview branches
-
+Exclude Preview branches:
 `*`
 
 This will deploy only branches starting with `release/`.
