@@ -71,7 +71,7 @@ If your project uses a different Node version less than 16, you will have to upg
  
 {{</Aside>}}
  
-The next step is to install [Wrangler 2](/workers/cli-wrangler/) in your project, using the `cloudflare/wrangler-action@2.0.0` Action, which requires you to set up your environment variables.
+The next step is to install [Wrangler](/workers/cli-wrangler/) in your project, using the `cloudflare/wrangler-action@2.0.0` Action, which requires you to set up your environment variables.
  
 Finally, the Action makes sure you log in to your Account with your Cloudflare credentials stored as secrets in your project to publish your site with the `pages publish` command.
  
