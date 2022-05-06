@@ -58,10 +58,10 @@ For example, if you wanted to match all branches that started with `fix/` then y
     
 If you want to enforce branch prefixes such as `fix/`, `feat/`, or `chore/` with wildcard syntax, you can include and exclude certain branches with the following rules:
 
-Include Preview branches:
+* Include Preview branches:
 `fix/*`, `feat/*`, `chore/*`
 
-Exclude Preview branches:
+* Exclude Preview branches:
 ``
     
 where Pages will include any branches with the indicated prefixes and exclude everything else. In this example the excluding option is left empty.
@@ -70,10 +70,10 @@ where Pages will include any branches with the indicated prefixes and exclude ev
 
 If you wanted to prevent dependabot from creating a deployment for each PR it creates, you can exclude those branches with the following:
 
-Include Preview branches:
+* Include Preview branches:
 `*`
 
-Exclude Preview branches:
+* Exclude Preview branches:
 `dependabot/*`
 
 where Pages will include all branches except any branch starting with “dependabot”. 
@@ -82,10 +82,10 @@ where Pages will include all branches except any branch starting with “dependa
 
 If you only want to deploy release-prefixed branches, then you could use the following rules:
 
-Include Preview branches:
+* Include Preview branches:
 `release/*`
 
-Exclude Preview branches:
+* Exclude Preview branches:
 `*`
 
 This will deploy only branches starting with `release/`.
