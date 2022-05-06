@@ -14,8 +14,11 @@ Once you have your pre-built assets ready, there are two ways to begin uploading
 1. Using Wrangler CLI 
 2. Dragging and dropping 
 
-_Note: Within a project, you can switch between creating deployments with either method. However, at this time, you cannot additionally push changes through your standard git-integration within the same project._
+{{<Aside type= "note">}}
+  
+Within a project, you can switch between creating deployments with either method. However, at this time, you cannot additionally push changes through your standard git-integration within the same project._
 
+{{</Aside>}}
 
 ## Supported file types:
 
@@ -27,7 +30,7 @@ _Note: Within a project, you can switch between creating deployments with either
 
 ### Setting up Wrangler: 
 
-To begin, be sure to [install latest version](https://developers.cloudflare.com/workers/cli-wrangler/install-update/) of Wrangler and [set up Wrangler](https://developers.cloudflare.com/workers/cli-wrangler/authentication/) to work with your Cloudflare user. Please note that Pages integration with Wrangler relies on Wrangler 2.
+To begin, be sure to [install the latest version](https://developers.cloudflare.com/workers/cli-wrangler/install-update/) of Wrangler and [set up Wrangler](https://developers.cloudflare.com/workers/cli-wrangler/authentication/) to work with your Cloudflare user. Please note that Pages integration with Wrangler relies on Wrangler 2.
 
 
 #### Deploying your first project: 
@@ -41,7 +44,7 @@ wrangler pages publish <project directory>
 
 Once executed, you will be prompted to choose whether you’d like to publish assets for an existing project or if you’d like to create a new one. To begin a new project, indicate so with the options provided, continue to name your project, and deploy. Subsequent deployments will re-use these values (saved in your `node_modules/.cache/wrangler` folder).
 
-After your first deployment, in the Pages dashboard, you can navigate to your newly created project to access deployment details including its shareable / unique preview URL. 
+After your first deployment, in the Pages dashboard, you can navigate to your newly created project to access deployment details, including its shareable / unique preview URL. 
 
 
 #### Creating a new deployment:
@@ -95,5 +98,5 @@ When uploading your assets, if an asset exceeds the standard Pages limits of 25 
 
 If using Wrangler, you will see a `Error: Pages only supports files up to 25 MiB in size. <file> is <size> in size` error for asset size exceedance and **"Error: Pages only supports up to 20,000 files in a deployment at the moment. Try a smaller project”** for asset number exceedance. 
 
-If using the drag and drop method, a red warning symbol will appear next to an asset if too large and thus unsuccessfully uploaded. In this case, you may choose to delete that asset but you cannot replace it. In order to do so, you must reupload the entire project. If you exceed the file number limit, you will receive a {write error message here} error. 
+If using the drag and drop method, a red warning symbol will appear next to an asset if too large and thus unsuccessfully uploaded. In this case, you may choose to delete that asset but you cannot replace it. To do so, you must reupload the entire project. If you exceed the file number limit, you will receive a {write error message here} error. 
  
