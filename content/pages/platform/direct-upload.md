@@ -22,8 +22,8 @@ Within a project, you can switch between creating deployments with either method
 
 ## Supported file types:
 
-* Wrangler: a single folder of assets (e.g. HTML, CSS, JS, PNG, SVG)
-* Drag and drop: zip or folder of assets (e.g. HTML, CSS, JS, PNG, SVG) 
+* Wrangler: a single folder of assets(e.g. HTML, CSS, JS, PNG, SVG)
+* Drag and drop: zip or folder of assets(e.g. HTML, CSS, JS, PNG, SVG) 
 
 
 ## Wrangler CLI 
