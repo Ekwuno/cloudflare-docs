@@ -22,7 +22,7 @@ CF_ACCOUNT_ID=<account id> npx wrangler pages publish <directory> --project-name
  
 First log  into the [Cloudflare dashboard](https://dash.cloudflare.com/profile/api-tokens) >  **My Profile** > **API Tokens** > **Create Token** and under "Create Custom Token", select **Get started**. Start by naming the API Token, specify what product you are creating the API token for and give it the edit permission. In this case, select the "Account", "Cloudflare Pages" and "Edit":
  
-![Select API token for Cloudflare Pages](../media/select-API-token-for-pages.png)
+![Select API token for Cloudflare Pages](../media/select-api-token-for-pages.png)
  
 Click on **Continue to summary** and then **Create Token**. Now that you have created this token, you can use it to push your project from continuous integration platforms.
  
