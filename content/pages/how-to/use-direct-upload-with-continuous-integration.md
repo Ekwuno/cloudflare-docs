@@ -5,12 +5,12 @@ title: Use Direct Upload with continuous integration
  
 # Use Direct Upload with continuous integration
  
-Cloudflare Pages now supports directly uploading pre-built assets, allowing you to use custom build steps for your applications and deploy to Pages with [Wrangler](/workers/wrangler/).
+Cloudflare Pages now supports directly uploading pre-built assets, allowing you to use custom build steps for your applications and deploy to Pages with [Wrangler](/workers/cli-wrangler/).
  
  
 ## Deploying with Wrangler
  
-In your project directory, install [Wrangler](/workers/wrangler/) so you can deploy a folder of prebuilt assets by running this command:
+In your project directory, install [Wrangler](/workers/cli-wrangler/) so you can deploy a folder of prebuilt assets by running this command:
  
 ```sh
 # Publish created project
@@ -72,11 +72,11 @@ If your project uses a different Node version less than 16, you will have to upg
  
 {{</Aside>}}
  
-The next step is to install [Wrangler 2](/workers/wrangler/) in your project, using the `cloudflare/wrangler-action@2.0.0` action which requires you to have set up your environment variables.
+The next step is to install [Wrangler 2](/workers/cli-wrangler/) in your project, using the `cloudflare/wrangler-action@2.0.0` action which requires you to have set up your environment variables.
  
 Finally, the Action makes sure you log in to your Account with your Cloudflare credentials stored as secrets in your project to publish your site with the `pages publish` command.
  
- 
+
 ## Using CircleCI for CI/CD
  
 [CircleCI](https://circleci.com/) is another continuous integration and continuous delivery (CI/CD) platform that allows you to automate your build, test, and deployment pipeline. It can be configured to run very complex pipelines efficiently with caching, docker layer caching, resource classes, etc.
@@ -89,7 +89,7 @@ After you have generated your Cloudflare API token and found your account ID in 
  
 On the CircleCI web app, go to your project's settings. You can navigate to "Projects" on the side navigation and then click the ellipsis button in the project's row. You will see the option to add Environment variables:
  
-![project setting env var](./media/project-settings-env-var-v2.png)
+![project setting env var](../media/project-settings-env-var-v2.png)
  
 Then click on **Environment Variables** in the side navigation > **Add variable** and enter the name and value of the new environment variable, which in this case is your Cloudflare credentials (`CLOUDFLARE_ACCOUNT_ID` and `CLOUDFLARE_API_TOKEN`).  
  
