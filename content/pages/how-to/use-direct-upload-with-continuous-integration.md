@@ -47,7 +47,7 @@ In your `pages-deployment.yaml` file, copy the following content:
 ```yaml
 ---
 filename: .github/workflows/pages-deployment.yaml
-—--
+---
 on: [push]
 jobs:
  deploy:
@@ -61,7 +61,6 @@ jobs:
          apiToken: ${{ secrets.CF_API_TOKEN }}
          accountId: ${{ secrets.CF_ACCOUNT_ID }}
          command: pages publish --project-name=<project name>
- 
 ```
  
 In the above code block, you have set up an Action that runs when you push code to the repository; running on `ubuntu-latest`, it first checks out your repository with the latest version of Node.
