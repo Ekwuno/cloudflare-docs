@@ -18,7 +18,7 @@ CF_ACCOUNT_ID=<account id> npx wrangler pages publish <directory> --project-name
 ```
  
  
-## Generate API Token from Cloudflare.
+## Generate API Token from Cloudflare
  
 First log  into the [Cloudflare dashboard](https://dash.cloudflare.com/profile/api-tokens) >  **My Profile** > **API Tokens** > **Create Token** and under "Create Custom Token", select **Get started**. Start by naming the API Token, specify what product you are creating the API token for and give it the edit permission. In this case, select the "Account", "Cloudflare Pages" and "Edit":
  
