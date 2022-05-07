@@ -36,7 +36,7 @@ After setting up your project initially, you can set up a GitHub Action to autom
  
 In the GitHub action you have set up, environment variables are needed to push your project up to Cloudflare Pages. Add the values of these environment variables in your project's GitHub repository by going to your projects repository > **Settings** > **Secrets** > **Actions** > **New repository secret**.
  
-Add the value of your CLOUDFLARE_ACCOUNT_ID and CLOUDFLARE_API_TOKEN; As `CF_ACCOUNT_ID` and `CF_API_TOKEN`, this will ensure that these secrets are secure, and each time your Action runs, it will access these secrets.
+Add the value of your Cloudflare account ID and  Cloudflare API token; As `CLOUDFLARE_ACCOUNT_ID` and `CLOUDFLARE_API_TOKEN`, this will ensure that these secrets are secure, and each time your Action runs, it will access these secrets.
  
 ### Setup workflow
  
@@ -58,8 +58,8 @@ jobs:
      - name: Publish
        uses: cloudflare/wrangler-action@2.0.0
        with:
-         apiToken: ${{ secrets.CF_API_TOKEN }}
-         accountId: ${{ secrets.CF_ACCOUNT_ID }}
+         apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+         accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
          command: pages publish --project-name=<project name>
 ```
  
@@ -153,7 +153,7 @@ filename: .travis.yml
 ---
 language: node_js
 node_js:
-- "16.17.0" # You can specify more versions of Node you want your CI process to support
+- "18.0.0" # You can specify more versions of Node you want your CI process to support
 branches:
  only:
    - travis-ci-test # Specify what branch you want your CI process to run on
