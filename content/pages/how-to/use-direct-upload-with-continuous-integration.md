@@ -67,7 +67,7 @@ In the above code block, you have set up an Action that runs when you push code 
  
 {{<Aside type="note" header="Note">}}
  
-If your project uses a different Node version less than 16, you will have to upgrade your Node version as Wrangler requires at least Node.js v16.7.0.
+If your project uses a Node version less than 16, you will have to upgrade your Node version as Wrangler requires at least Node.js v16.7.0.
  
 {{</Aside>}}
  
@@ -104,7 +104,7 @@ version: 2.1
 jobs:
  Publish-to-Pages:
    docker:
-     - image: cimg/node:17.2.0
+     - image: cimg/node:18
    steps:
      - checkout
      # Run your project's build step
@@ -123,11 +123,11 @@ workflows:
  
 ```
  
-Your continuous integration workflow is broken down into Jobs when using CircleCI. From the code block above, you can see that you first define a list of jobs that run on each commit. For example, your repository will run on a prebuilt docker image `cimg/node:16.7.0`. It first checks out the repository with the Node version specified in the image.
+Your continuous integration workflow is broken down into Jobs when using CircleCI. From the code block above, you can see that you first define a list of jobs that run on each commit. For example, your repository will run on a prebuilt docker image `cimg/node:18`. It first checks out the repository with the Node version specified in the image.
  
 {{<Aside type="note" header="Note">}}
  
-If your project uses a different Node version less than 16, you will have to upgrade your Node version as Wrangler requires at least Node.js v16.7.0.
+If your project uses a Node version less than 16, you will have to upgrade your Node version as Wrangler requires at least Node.js v16.7.0.
  
 {{</Aside>}}
  
