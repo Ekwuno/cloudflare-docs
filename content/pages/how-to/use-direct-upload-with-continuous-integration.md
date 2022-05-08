@@ -18,13 +18,19 @@ CF_ACCOUNT_ID=<account id> npx wrangler pages publish <directory> --project-name
 ```
  
  
-## Generate API Token from Cloudflare
- 
+## Get credentials from Cloudflare
+
+### Generate API Token
+
 First log  into the [Cloudflare dashboard](https://dash.cloudflare.com/profile/api-tokens) >  **My Profile** > **API Tokens** > **Create Token** and under "Create Custom Token", select **Get started**. Start by naming the API Token, specify what product you are creating the API token for and give it the edit permission. In this case, select the "Account", "Cloudflare Pages" and "Edit":
  
 ![Select API token for Cloudflare Pages](../media/select-api-token-for-pages.png)
  
 Click on **Continue to summary** and then **Create Token**. Now that you have created this token, you can use it to push your project from continuous integration platforms.
+
+### Get project account ID 
+
+In your Cloudflare dashboard, Click the project you want to get the account ID for; You will see your account ID under API in the bottom right. If you do not have a project, create one by clicking "Add a site." You can purchase a domain from [Cloudflare's registrar](/registrar/)
  
 ## Using GitHub Actions
  
