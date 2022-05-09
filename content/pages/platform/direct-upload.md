@@ -11,16 +11,16 @@ With Direct Uploads, you can bring your pre-built assets right to Pages. By usin
 
 Once you have your pre-built assets ready, there are two ways to begin uploading: 
 
-1. Using [Wrangler CLI](https://developers.cloudflare.com/workers/wrangler/).
+1. Using [Wrangler CLI](/workers/wrangler/).
 2. Dragging and dropping.
 
 {{<Aside type= "note">}}
   
-Within a project, you can switch between creating deployments with either method. However, at this time, you cannot additionally push changes through your standard git-integration within the same project._
+Within a project, you can switch between creating deployments with either method. However, you cannot push additional changes through your standard git integration within the same project if that repository is already using Direct Uploads.
 
 {{</Aside>}}
 
-## Supported file types:
+## Supported file types
 
 Below is the supported file types for each Direct Upload options:
 * Wrangler: A single folder of assets(for example, HTML, CSS, JS, PNG, SVG).
@@ -28,7 +28,7 @@ Below is the supported file types for each Direct Upload options:
 
 ## Wrangler CLI 
 
-### Set up Wrangler: 
+### Set up Wrangler
 
 To begin, [install the latest version](https://developers.cloudflare.com/workers/cli-wrangler/install-update/) of Wrangler and [set up Wrangler](https://developers.cloudflare.com/workers/cli-wrangler/authentication/). Note that Pages integration with Wrangler relies on Wrangler 2.
 
@@ -48,9 +48,8 @@ After you deploy your Project, go to your newly created Pages project in the Clo
 
 After you have deployed your project, you can continue to add new deployments to that project. Deployments will be available at the following convention: `<DEPLOYMENT>.<PROJECT_NAME>.pages.dev`. 
 
-
 ```sh
-wrangler pages publish <directory> --branch=[branch]
+wrangler pages publish <DIRECTORY> --branch=[BRANCH]
 ```
 
 {{<Aside type= "note">}}
@@ -79,7 +78,7 @@ For step-by-step directions on how to use Wrangler and continuous integration to
 
 #### Deploy your project with drag and drop
 
-To begin the deployment process, on the **Create a Project** page, select **Upload Assets** and enter your project name in the provided field. Your project will be served from `<project name>.pages.dev`. Next drag and drop your build output directory into the uploading frame. Once your files have been successfully uploaded, click **Save and Deploy** and continue to your newly deployed project. 
+To begin the deployment process, on the **Create a Project** page, select **Upload Assets** and enter your project name in the provided field. Your project will be served from `<PROJECT_NAME>.pages.dev`. Next drag and drop your build output directory into the uploading frame. Once your files have been successfully uploaded, select **Save and Deploy** and continue to your newly deployed project. 
 
 #### Create a new deployment
 
