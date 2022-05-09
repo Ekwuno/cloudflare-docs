@@ -9,18 +9,18 @@ When connected to your git source, Pages allows you to control which environment
 
 ### Skip builds
 
-Without any configuration required, you can choose to skip a build and deployment on an adhoc basis. By adding [CISkip], [CI-Skip], [Skip CI], [Skip-CI] or [CF-Pages-Skip] as a prefix in your commit message, Pages will omit that build/deployment. The prefixes are case insensitive. 
+Without any configuration required, you can choose to skip a build and deployment on an adhoc basis. By adding the `[CISkip]`, `[CI-Skip]`, `[Skip CI]`, `[Skip-CI]` or `[CF-Pages-Skip]` flag as a prefix in your commit message, Pages will omit that build/deployment. The prefixes are case insensitive. 
 
-However, if you would like to configure your project’s settings for automatic deployments going forward without having to use CI Skip, begin by navigating to the **Build & Deployments** section of your project. 
+However, if you would like to configure your project’s settings for automatic deployments without having to use CI Skip, go to your Pages project > **Settings** > **Build & deployments** and select the configuration option for either the production deployment or the preview deployment.
 
 
 ### Production branch control 
 
-Select  “Configure Production deployments”. Pages will default to setting your Production environment to the branch you first push, however, you can set your production to another branch if you choose. 
+To configure deployment options, go to your Pages project > **Settings** > **Builds & deployments** > **Configure Production deployments**. Pages will default to setting your production environment to the branch you first push, but you can set your production to another branch if you choose. 
 
 You can also enable or disable automatic deployment behavior on the production branch by checking the **Enable automatic production branch deployments** box. You must save your settings in order for the new production branch controls to take effect. 
 
-![You can configure your preview deployments by following the steps above](../media/configure-preview-deployment.png)
+![Configure your preview deployments by following the steps above](../media/configure-preview-deployment.png)
 
 ### Preview branch control 
 
@@ -28,7 +28,7 @@ When configuring automatic builds for preview deployments, there are three optio
 
 * **All non-Production branches**: By default, Pages will automatically deploy any and every commit to a preview branch.
 * **None**: Turns off automatic builds for all preview branches.
-* **Custom branches**: Customize the automatic deployments of certain_preview branches.
+* **Custom branches**: Customize the automatic deployments of certain preview branches.
 
 ![Choose what kind of preview deployment you need for your Pages project in the Cloudflare dashboard](../media/include-preview-brances.png)
 
@@ -65,11 +65,11 @@ If you want to enforce branch prefixes such as `fix/`, `feat/`, or `chore/` with
 * Exclude Preview branches:
 ``
     
-where Pages will include any branches with the indicated prefixes and exclude everything else. In this example the excluding option is left empty.
+Here Pages will include any branches with the indicated prefixes and exclude everything else. In this example, the excluding option is left empty.
 
 **_Example 2:_**
 
-If you wanted to prevent dependabot from creating a deployment for each PR it creates, you can exclude those branches with the following:
+If you wanted to prevent [dependabot](https://github.com/dependabot) from creating a deployment for each PR it creates, you can exclude those branches with the following:
 
 * Include Preview branches:
 `*`
