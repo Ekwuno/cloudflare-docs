@@ -30,7 +30,7 @@ Below is the supported file types for each Direct Upload options:
 
 ### Set up Wrangler
 
-To begin, [install the latest version](https://developers.cloudflare.com/workers/cli-wrangler/install-update/) of Wrangler and [set up Wrangler](https://developers.cloudflare.com/workers/cli-wrangler/authentication/). Note that Pages integration with Wrangler relies on Wrangler 2.
+To begin, [install the latest version](/workers/cli-wrangler/install-update/) of Wrangler and [set up Wrangler](/workers/cli-wrangler/authentication/). Note that Pages integration with Wrangler relies on Wrangler 2.
 
 #### Deploy your project with Wrangler
 
