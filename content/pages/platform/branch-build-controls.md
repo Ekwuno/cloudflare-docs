@@ -3,11 +3,11 @@ pcx-content-type: concept
 title: Branch build controls
 ---
 
-## Branch Build Controls 
+## Branch build controls 
 
-When connected to your git source, Pages allows you to control which environments and branches you’d like to automatically build. By default, any time you commit to either your Production or Preview environment Pages will trigger a build. However, with branch build controls, you can configure automatic deployments to suit your preference on a per project basis.
+When connected to your git source, Pages allows you to control which environments and branches you would like to automatically build. By default, Pages will trigger a build any time you commit to either your production or preview environment. However, with branch build controls, you can configure automatic deployments to suit your preference on a per project basis.
 
-### Skip Builds 
+### Skip builds
 
 Without any configuration required, you can choose to skip a build and deployment on an adhoc basis. By adding [CISkip], [CI-Skip], [Skip CI], [Skip-CI] or [CF-Pages-Skip] as a prefix in your commit message, Pages will omit that build/deployment. The prefixes are case insensitive. 
 
@@ -18,26 +18,27 @@ However, if you would like to configure your project’s settings for automatic 
 
 Select  “Configure Production deployments”. Pages will default to setting your Production environment to the branch you first push, however, you can set your production to another branch if you choose. 
 
-You can also enable or disable automatic deployment behavior on the Production branch by checking the provided box. You must save your settings in order for the new Production branch controls to take effect. 
+You can also enable or disable automatic deployment behavior on the production branch by checking the **Enable automatic production branch deployments** box. You must save your settings in order for the new production branch controls to take effect. 
 
-![Configure preview branch](../media/configure-preview-deployment.png)
+![You can configure your preview deployments by following the steps above](../media/configure-preview-deployment.png)
 
 ### Preview branch control 
 
-To configure automatic builds for preview deployments, there are three options to choose from. 
+When configuring automatic builds for preview deployments, there are three options to choose from. 
 
-* **All non-Production branches**: By default, Pages will automatically deploy any and every commit to a Preview branch and thus is set to “All non-Production branches”. 
-* **None**: If you would like to turn off automatic builds for all preview branches you can do so by selecting this option. 
-* **Custom branches**: However, if you would like to further customize the automatic deployments of _certain_ preview branches, you can do so by selecting [**Custom Branches**].
+* **All non-Production branches**: By default, Pages will automatically deploy any and every commit to a preview branch.
+* **None**: Turns off automatic builds for all preview branches.
+* **Custom branches**: Customize the automatic deployments of certain_preview branches.
 
-![Include preview branch](../media/include-preview-brances.png)
+![Choose what kind of preview deployment you need for your Pages project in the Cloudflare dashboard](../media/include-preview-brances.png)
 
-#### Custom Preview Branch Control  
+#### Custom preview branch control  
 
-By selecting Custom branches, you can specify in the provided configuration fields branches you wish to include and exclude from automatic deployments. The configuration fields can be filled in two ways: 
+By selecting **Custom branches**, you can specify branches you wish to include and exclude from automatic deployments in the provided configuration fields. The configuration fields can be filled in two ways: 
 
-* **Static branch names**: Enter the precise name of the branch you are looking to include or exclude (e.g. staging, dev) 
-* **Wildcard syntax**: Use wildcards to match multiple branches. You can specify wildcards at the start or end of your rule. The order of execution for the config is:
+* **Static branch names**: Enter the precise name of the branch you are looking to include or exclude (for example, staging or dev).
+* **Wildcard syntax**: Use wildcards to match multiple branches. You can specify wildcards at the start or end of your rule. The order of execution for the configuration is:
+
 <ol>
   <ol>
     <li>Excludes</li>
@@ -46,7 +47,7 @@ By selecting Custom branches, you can specify in the provided configuration fiel
   </ol>
 </ol>
 
-This means we will process the exclude configuration first, then go to the include configuration and if a branch doesn't match either then it will be skipped.
+Pages will process the exclude configuration first, then go to the include configuration. If a branch does not match either then it will be skipped.
 
 #### Wildcards
 
@@ -76,7 +77,7 @@ If you wanted to prevent dependabot from creating a deployment for each PR it cr
 * Exclude Preview branches:
 `dependabot/*`
 
-where Pages will include all branches except any branch starting with “dependabot”. 
+where Pages will include all branches except any branch starting with `dependabot`. 
 
 **_Example 3:_**
 
