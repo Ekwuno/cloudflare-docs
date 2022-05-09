@@ -111,22 +111,21 @@ jobs:
  Publish-to-Pages:
    docker:
      - image: cimg/node:18
+     environment:
+        CLOUDFLARE_ACCOUNT_ID: $CLOUDFLARE_ACCOUNT_ID
+        CLOUDFLARE_API_TOKEN: $CLOUDFLARE_API_TOKEN
+   
    steps:
      - checkout
      # Run your project's build step
      - run: npm install && npm run build
      # Publish with wrangler
      - run: npx wrangler pages publish dist --project-name=<PROJECT NAME> # Replace dist with the name of your build folder and input your project name 
-       environment:
-        CLOUDFLARE_ACCOUNT_ID: $CLOUDFLARE_ACCOUNT_ID
-        CLOUDFLARE_API_TOKEN: $CLOUDFLARE_API_TOKEN
-   
+       
 workflows:
  Publish-to-Pages-workflow:
    jobs:
      - Publish-to-Pages
- 
- 
 ```
  
 Your continuous integration workflow is broken down into Jobs when using CircleCI. From the code block above, you can see that you first define a list of jobs that run on each commit. For example, your repository will run on a prebuilt docker image `cimg/node:18`. It first checks out the repository with the Node version specified in the image.
