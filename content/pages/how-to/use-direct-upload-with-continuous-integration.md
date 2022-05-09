@@ -5,7 +5,7 @@ title: Use Direct Upload with continuous integration
 
 # Use Direct Upload with continuous integration
 
-Cloudflare Pages now supports directly uploading prebuilt assets, allowing you to use custom build steps for your applications and deploy to Pages with [Wrangler](/workers/cli-wrangler/).
+Cloudflare Pages now supports directly uploading prebuilt assets, allowing you to use custom build steps for your applications and deploy to Pages with [Wrangler](/workers/cli-wrangler/). This guide will teach you how to deploy your application to Pages, using continuous integration.
 
 ## Deploy with Wrangler
 
@@ -101,7 +101,13 @@ Similar to GitHub Actions, CircleCI can use Wrangler to continuously deploy your
  
 After you have generated your Cloudflare API token and found your account ID in the dashboard, you will need to add them to your CircleCI dashboard to use your environment variables in your project.
  
-On the CircleCI web application, go to your project's settings. Go to **Projects** on the side navigation and select the ellipsis (...) button in the project's row. You will see the option to add environment variables:
+To add environment variables, in the CircleCI web application:
+
+1. Go to your project's settings.
+2. Select **Projects** in the side menu.
+3. Select the ellipsis (...) button in the project's row. You will see the option to add environment variables.
+4.  Select **Environment Variables** > **Add Environment Variable**.
+5. Enter the name and value of the new environment variable, which is your Cloudflare credentials (`CLOUDFLARE_ACCOUNT_ID` and `CLOUDFLARE_API_TOKEN`).
  
 ![Follow the instructions above to add environment variables to your CircleCI settings](../media/project-settings-env-var-v2.png)
  
