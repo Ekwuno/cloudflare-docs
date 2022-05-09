@@ -154,7 +154,7 @@ The job then proceeds to run all the steps specified, after which you will need 
 
 ## Travis CI for CI/CD
  
-Travis CI is an open-source continuous integration tool that handles specific tasks, such as pull requests and code pushes for your project workflow. Travis CI can be integrated into your GitHub projects, databases, and other pre-installed services enabled in your build configuration. To use Travis CI, you should have A GitHub, Bitbucket, GitLab or Assembla account.
+Travis CI is an open-source continuous integration tool that handles specific tasks, such as pull requests and code pushes for your project workflow. Travis CI can be integrated into your GitHub projects, databases, and other preinstalled services enabled in your build configuration. To use Travis CI, you should have A GitHub, Bitbucket, GitLab or Assembla account.
 
 ### Add Cloudflare credentials to TravisCI
 
@@ -186,8 +186,6 @@ script:
 env:
 - CLOUDFLARE_ACCOUNT_ID: {$CLOUDFLARE_ACCOUNT_ID}
 - CLOUDFLARE_API_TOKEN: {$CLOUDFLARE_API_TOKEN}
- 
-
 ```
 
 In the code block above you have specified the language as `node_js` and listed the value as `16.7.0` because Wrangler 2 depends on this Node version or higher. You have also set branches you want your continuous integration to run on. Finally, input your `PROJECT NAME` in the script section and your CI process should work as expected. 
