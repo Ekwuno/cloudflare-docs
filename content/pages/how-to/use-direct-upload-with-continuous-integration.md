@@ -56,7 +56,8 @@ This will ensure that the secrets are secure. Each time your GitHub Actions runs
 Add the value of your Cloudflare account ID and Cloudflare API token as `CLOUDFLARE_ACCOUNT_ID` and `CLOUDFLARE_API_TOKEN`, respectively. This will ensure that these secrets are secure, and each time your Action runs, it will access these secrets.
 
 ### Setup workflow
-Create a `.github/workflows/pages-deployment.yaml` file at the root of your project. This file will contain the commands you want the process to take on the request you specified. For a detailed explanation of GitHub Actions syntax, refer to the [official documentation](https://docs.github.com/en/actions).
+Create a `.github/workflows/pages-deployment.yaml` file at the root of your project. The `.github/workflows/pages-deployment.yaml` file will contain the jobs you specify on the request i.e : `on: [push]` in this case. It can also be on a pull request. For a detailed explanation of GitHub Actions syntax, refer to the [official documentation](https://docs.github.com/en/actions).
+
 In your `pages-deployment.yaml` file, copy the following content:
  
 ```yaml
@@ -85,7 +86,7 @@ If your project uses a Node version less than 16, you will have to upgrade your 
 
 {{</Aside>}}
 
-The next step is to install [Wrangler](/workers/cli-wrangler/) in your project, using the `cloudflare/wrangler-action@2.0.0` Action, which requires you to set up your environment variables.
+The next step is to install [Wrangler](/workers/cli-wrangler/) in your project, using the `cloudflare/wrangler-action@2.0.0` Action, which requires you to use the secrets you added to GitHub.
 Finally, the Action makes sure you log in to your Account with your Cloudflare credentials stored as secrets in your project to publish your site with the `pages publish` command.
 ## Using CircleCI for CI/CD
  
