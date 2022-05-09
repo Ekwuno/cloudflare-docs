@@ -11,7 +11,7 @@ With Direct Uploads, you can bring your pre-built assets right to Pages. By usin
 
 Once you have your pre-built assets ready, there are two ways to begin uploading: 
 
-1. Using [Wrangler CLI](https://developers.cloudflare.com/workers/wrangler/).
+1. Using [Wrangler CLI](/workers/wrangler/get-started/).
 2. Dragging and dropping.
 
 {{<Aside type= "note">}}
@@ -86,9 +86,8 @@ After you have your project created, select **Create a new deployment** to begin
 
 ## Troubleshoot
 
-When uploading your assets, if an asset exceeds the standard Pages [limits](/pages/platform/limits/#files) of 25 MiB or if the total number of assets exceeds 20,000 files, you will not be able to deploy your project. 
+There are [limits](/pages/platform/limits/#files) in place for both drag and drop and Wrangler upload in regards to file count and file size. 
 
-If using Wrangler, you will see a `Error: Pages only supports files up to 25 MiB in size. <FILE> is <SIZE> in size` error for asset size exceedance and **"Error: Pages only supports up to 20,000 files in a deployment at the moment. Try a smaller project”** for asset number exceedance. 
+If using Wrangler, you can upload up to 20,000 files with each file being no greater than 25MiB. 
 
-If using the drag and drop method, a red warning symbol will appear next to an asset if the asset is too large and thus unsuccessfully uploaded. In this case, you may choose to delete that asset but you cannot replace it. To do so, you must reupload the entire project. If you exceed the file number limit, you will receive a `{write error message here}` error. 
- 
+If using the drag and drop method, you can upload 1,000 files with each file being no greater than 25MiB. A red warning symbol will appear next to an asset if too large and thus unsuccessfully uploaded. In this case, you may choose to delete that asset but you cannot replace it. In order to do so, you must reupload the entire project.
