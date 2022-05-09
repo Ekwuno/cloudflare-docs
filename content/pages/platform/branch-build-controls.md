@@ -77,7 +77,7 @@ If you wanted to prevent [dependabot](https://github.com/dependabot) from creati
 * Exclude Preview branches:
 `dependabot/*`
 
-where Pages will include all branches except any branch starting with `dependabot`. 
+where Pages will include all branches except any branch starting with `dependabot`. In this example, the excluding option means any `dependabot/`  branches will not be built.
 
 **_Example 3:_**
 
