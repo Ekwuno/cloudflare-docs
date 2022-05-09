@@ -81,6 +81,7 @@ jobs:
          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
          command: pages publish --project-name=<project name>
 ```
+
 In the above code block, you have set up an Action that runs when you push code to the repository. Running on `ubuntu-latest`, the Action first reviews your repository with the latest version of Node.
 
 {{<Aside type="note" header="Note">}}
@@ -106,12 +107,12 @@ To add environment variables, in the CircleCI web application:
 1. Go to your project's settings.
 2. Select **Projects** in the side menu.
 3. Select the ellipsis (...) button in the project's row. You will see the option to add environment variables.
-4.  Select **Environment Variables** > **Add Environment Variable**.
+4. Select **Environment Variables** > **Add Environment Variable**.
 5. Enter the name and value of the new environment variable, which is your Cloudflare credentials (`CLOUDFLARE_ACCOUNT_ID` and `CLOUDFLARE_API_TOKEN`).
  
 ![Follow the instructions above to add environment variables to your CircleCI settings](../media/project-settings-env-var-v2.png)
  
-### Setup a workflow
+### Set up a workflow
  
 Create a `.circleci/config.yml` file at the root of your project. This file contains the jobs that will be executed based on the order of your workflow. In your `config.yml` file, copy the following content:
  
