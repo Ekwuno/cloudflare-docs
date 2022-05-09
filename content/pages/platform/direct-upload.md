@@ -40,7 +40,7 @@ Run the following Wrangler command to create a project:
 wrangler pages publish <project directory>
 ```
 
-After running `wrangler pages publish`, you will be prompted to choose whether you would like to publish assets for an existing project or if you would like to create a new one. To begin a new project, indicate so with the options provided, continue to name your project, and deploy. Subsequent deployments will re-use these values (saved in your `node_modules/.cache/wrangler` folder).
+After running `wrangler pages publish`, you will be prompted to choose whether you would like to publish assets for an existing project or if you would like to create a new one. To begin a new project, select create a new project, continue to name your project, and deploy. Subsequent deployments will reuse these values (saved in your `node_modules/.cache/wrangler` folder).
 
 After you deploy your Project, go to your newly created Pages project in the Cloudflare dashboard to access deployment details, including its shareable and unique preview URL. 
 
