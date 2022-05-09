@@ -22,6 +22,7 @@ Within a project, you can switch between creating deployments with either method
 
 ## Supported file types:
 
+Below is the supported file types for each Direct Upload options:
 * Wrangler: A single folder of assets(for example, HTML, CSS, JS, PNG, SVG).
 * Drag and drop: Zip or folder of assets(for example, HTML, CSS, JS, PNG, SVG).
 
@@ -39,7 +40,7 @@ Run the following Wrangler command to create a project:
 wrangler pages publish <project directory>
 ```
 
-Once executed, you will be prompted to choose whether you’d like to publish assets for an existing project or if you’d like to create a new one. To begin a new project, indicate so with the options provided, continue to name your project, and deploy. Subsequent deployments will re-use these values (saved in your `node_modules/.cache/wrangler` folder).
+After running `wrangler pages publish`, you will be prompted to choose whether you would like to publish assets for an existing project or if you would like to create a new one. To begin a new project, indicate so with the options provided, continue to name your project, and deploy. Subsequent deployments will re-use these values (saved in your `node_modules/.cache/wrangler` folder).
 
 After you deploy your Project, go to your newly created Pages project in the Cloudflare dashboard to access deployment details, including its shareable and unique preview URL. 
 
@@ -78,7 +79,7 @@ For step-by-step directions on how to use Wrangler and continuous integration to
 
 #### Deploy your project with drag and drop
 
-To begin, on the **Create a Project** page, select **Upload Assets** and enter your project name in the provided field. Your project will be served from `<project name>.pages.dev`. Next drag and drop your build output directory into the uploading frame. Once your files have been successfully uploaded, click **Save and Deploy** and continue to your newly deployed project. 
+To begin the deployment process, on the **Create a Project** page, select **Upload Assets** and enter your project name in the provided field. Your project will be served from `<project name>.pages.dev`. Next drag and drop your build output directory into the uploading frame. Once your files have been successfully uploaded, click **Save and Deploy** and continue to your newly deployed project. 
 
 #### Create a new deployment
 
