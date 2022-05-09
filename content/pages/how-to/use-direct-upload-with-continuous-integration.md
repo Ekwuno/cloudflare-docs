@@ -105,7 +105,7 @@ On the CircleCI web application, go to your project's settings. Go to **Projects
  
 ![Follow the instructions above to add environment variables to your CircleCI settings](../media/project-settings-env-var-v2.png)
  
-### Setup
+### Setup a workflow
  
 Create a `.circleci/config.yml` file at the root of your project. This file contains the jobs that will be executed based on the order of your workflow. In your `config.yml` file, copy the following content:
  
