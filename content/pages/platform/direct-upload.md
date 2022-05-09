@@ -86,8 +86,8 @@ After you have your project created, select **Create a new deployment** to begin
 
 ## Troubleshoot
 
-There are [limits](/pages/platform/limits/#files) in place for both drag and drop and Wrangler upload in regards to file count and file size. 
+There is a 1,000 file [limits](/pages/platform/limits/#files) in place for both drag and drop and Wrangler upload in regards to file count and a 25MiB limit in place for individual file size. 
 
-If using Wrangler, you can upload up to 20,000 files with each file being no greater than 25MiB. 
+If using the drag and drop method, a red warning symbol will appear next to an asset if too large and thus unsuccessfully uploaded. In this case, you may choose to delete that asset but you cannot replace it. In order to do so, you must reupload the entire project.
 
-If using the drag and drop method, you can upload 1,000 files with each file being no greater than 25MiB. A red warning symbol will appear next to an asset if too large and thus unsuccessfully uploaded. In this case, you may choose to delete that asset but you cannot replace it. In order to do so, you must reupload the entire project.
+
